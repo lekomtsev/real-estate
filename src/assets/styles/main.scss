@@ -1,0 +1,15 @@
+// Шрифты и сброс стилей
+@import "test";
+
+$blue: blue;
+
+.box {
+  padding: 21px;
+  background: lightblue;
+  display: flex;
+
+  &__title {
+    color: $blue;
+    background: lightgreen;
+  }
+}
