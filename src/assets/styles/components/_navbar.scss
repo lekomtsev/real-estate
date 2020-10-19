@@ -1,0 +1,18 @@
+@import "_variables";
+
+
+.navbar {
+
+}
+
+.navbar__item {
+
+  & + .navbar__item {
+    margin-top: 12px;
+  }
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: $color-white;
+}

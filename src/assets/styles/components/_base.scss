@@ -1,3 +1,5 @@
+@import "_variables";
+
 * {
   margin: 0;
   outline: none;
@@ -14,7 +16,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
-  // color: $color-cod-gray;
+  color: $color-mine-shaft;
   // background: $color-rose-white;
 }
 
