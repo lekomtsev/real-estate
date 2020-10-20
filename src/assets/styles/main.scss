@@ -1,16 +1,13 @@
 // Шрифты и сброс стилей
-@import "vendor/_vendor";
-@import "components/_fonts";
-@import "components/_base";
-@import "components/_helpers";
+@import "vendor/vendor";
+@import "components/fonts";
+@import "components/base";
+@import "components/helpers";
 
 // Компоненты страницы
-@import "components/_header";
-@import "components/_sidebar";
-@import "components/_main";
+@import "components/header";
+@import "components/sidebar";
+@import "components/main";
 
 // Меню в левом сайдбаре
-@import "components/_navbar";
-
-//
-
+@import "components/navbar";

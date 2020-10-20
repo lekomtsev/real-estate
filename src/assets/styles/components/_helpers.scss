@@ -1,4 +1,4 @@
-@import "_variables";
+@import "variables";
 
 .container {
   margin: 0 auto;
@@ -6,30 +6,29 @@
   max-width: 1140px;
 }
 
-.button {
+/* .button {
 
 }
 
 .button--primary {
 
-}
+} */
 
 .button--light {
   background: $color-white;
 }
 
-.button-rounded {
+/* .button-rounded {
 
-}
+} */
 
 .link {
-
   text-decoration: none;
   color: $color-white;
 }
 
-.link--underline {}
+/* .link--underline {}
 
 .link--underline-dashed {
 
-}
+} */

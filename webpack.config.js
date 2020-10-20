@@ -5,6 +5,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 // Копирование изображений, шрифтов, uploads итд
 // Переделать шрифты,
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+// Stylelint
+const StylelintWebpackPlugin = require('stylelint-webpack-plugin')
+
 
 // Проверка настройки
 const isDev = process.env.NODE_ENV === 'development'
@@ -43,6 +46,7 @@ module.exports = {
             filename: '[name].css'
         }),
 
+        // Плагин копирования
         new CopyWebpackPlugin({
             patterns: [
                 {
@@ -51,6 +55,13 @@ module.exports = {
                 },
 
             ],
+        }),
+
+        new StylelintWebpackPlugin({
+            configFile: '.stylelintrc',
+            // failOnError: false,
+            emitWarning: true,
+            // emitError: true
         }),
     ],
     module: {
@@ -64,9 +75,11 @@ module.exports = {
                             hmr: true,
                             reloadAll: true,
                             publicPath: 'dist',
+                            sourceMap: false,
                         }
                     },
                     'css-loader',
+                    'postcss-loader',
                     'sass-loader'
                 ],
             },
@@ -78,13 +91,6 @@ module.exports = {
                     // outputPath: './assets1/fonts/test',
                 }
             },
-            /*{
-                test: /\.(png|jpe?g|gif|svg)$/i,
-                loader: 'file-loader',
-                options: {
-                    outputPath: '/assets/images/',
-                },
-            },*/
         ]
     }
 }
