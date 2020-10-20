@@ -11,13 +11,13 @@ body {
   position: relative;
   overflow-x: hidden;
   min-width: 320px;
-  // font-family: "RFTone", sans-serif;
+  // font-family: "FuturaPT Book", sans-serif;
+  font-family: $FuturaPTBook, sans-serif;
   font-weight: 400;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
+  font-size: 15px;
   color: $color-mine-shaft;
-  // background: $color-rose-white;
 }
 
 a,

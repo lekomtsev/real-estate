@@ -2,6 +2,9 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+// Копирование изображений, шрифтов, uploads итд
+// Переделать шрифты,
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // Проверка настройки
 const isDev = process.env.NODE_ENV === 'development'
@@ -39,6 +42,16 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].css'
         }),
+
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: 'assets/images/',
+                    to: 'assets/images/'
+                },
+
+            ],
+        }),
     ],
     module: {
         rules: [
@@ -49,18 +62,29 @@ module.exports = {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
                             hmr: true,
-                            reloadAll: true
+                            reloadAll: true,
+                            publicPath: 'dist',
                         }
                     },
                     'css-loader',
                     'sass-loader'
                 ],
             },
+            {
+                test: /\.(woff|woff2)$/,
+                loader: 'file-loader',
+                options: {
+                    publicPath: './assets/fonts',
+                    // outputPath: './assets1/fonts/test',
+                }
+            },
             /*{
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: jsLoaders()
-            }*/
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                loader: 'file-loader',
+                options: {
+                    outputPath: '/assets/images/',
+                },
+            },*/
         ]
     }
 }
