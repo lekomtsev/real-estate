@@ -1,0 +1,149 @@
+<div class="filter">
+  <div class="filter__section">
+
+    <ul class="area-list">
+      <li class="area-list__item">
+        <div class="area-select js-area-select">
+          <div class="area-select__title">Город</div>
+          <div class="area-select__dropdown">
+
+            <div class="area-select__content">
+              <div class="checkbox area-select__item">
+                <input class="checkbox__input" type="radio" id="city-1" name="city">
+                <label class="checkbox__label" for="city-1">Москва</label>
+              </div>
+              <div class="checkbox area-select__item">
+                <input class="checkbox__input" type="radio" id="city-2" name="city">
+                <label class="checkbox__label" for="city-2">Санк-Петербург</label>
+              </div>
+              <div class="checkbox area-select__item">
+                <input class="checkbox__input" type="radio" id="city-3" name="city">
+                <label class="checkbox__label" for="city-3">Казань</label>
+              </div>
+              <div class="checkbox area-select__item">
+                <input class="checkbox__input" type="radio" id="city-4" name="city">
+                <label class="checkbox__label" for="city-4">Москва</label>
+              </div>
+              <div class="checkbox area-select__item">
+                <input class="checkbox__input" type="radio" id="city-5" name="city">
+                <label class="checkbox__label" for="city-5">Санк-Петербург</label>
+              </div>
+              <div class="checkbox area-select__item">
+                <input class="checkbox__input" type="radio" id="city-6" name="city">
+                <label class="checkbox__label" for="city-6">Казань</label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </li>
+      <li class="area-list__item">
+        <div class="area-select js-area-select">
+          <div class="area-select__title">Районы</div>
+          <div class="area-select__dropdown">
+
+            <div class="area-select__content">
+              <div class="checkbox area-select__item">
+                <input class="checkbox__input" type="checkbox" id="area-1" name="leninist">
+                <label class="checkbox__label" for="area-1">Лениниский</label>
+              </div>
+              <div class="checkbox area-select__item">
+                <input class="checkbox__input" type="checkbox" id="area-2" name="october">
+                <label class="checkbox__label" for="area-2">Октябрьский</label>
+              </div>
+              <div class="checkbox area-select__item">
+                <input class="checkbox__input" type="checkbox" id="area-3" name="upper">
+                <label class="checkbox__label" for="area-3">Верхний</label>
+              </div>
+              <div class="checkbox area-select__item">
+                <input class="checkbox__input" type="checkbox" id="area-4" name="lower">
+                <label class="checkbox__label" for="area-4">Нижний</label>
+              </div>
+            </div>
+
+            <button class="link area-select__link">Выбрать все</button>
+
+          </div>
+        </div>
+      </li>
+      <li class="area-list__item">
+        <div class="area-select js-area-select">
+          <div class="area-select__title">Застройщик</div>
+          <div class="area-select__dropdown">
+
+            <div class="area-select__content">
+              <div class="checkbox area-select__item">
+                <input class="checkbox__input" type="checkbox" id="developer-1" name="Developer">
+                <label class="checkbox__label" for="developer-1">Первый трест</label>
+              </div>
+              <div class="checkbox area-select__item">
+                <input class="checkbox__input" type="checkbox" id="developer-2" name="city">
+                <label class="checkbox__label" for="developer-2">Второй трест</label>
+              </div>
+              <div class="checkbox area-select__item">
+                <input class="checkbox__input" type="checkbox" id="developer-3" name="city">
+                <label class="checkbox__label" for="developer-3">UDS</label>
+              </div>
+            </div>
+
+            <button class="link area-select__link">Выбрать все</button>
+
+          </div>
+        </div>
+      </li>
+      <li class="area-list__item">
+        <div class="area-select js-area-select">
+          <div class="area-select__title">Класс жилья</div>
+          <div class="area-select__dropdown">
+
+            <div class="area-select__content">
+              <div class="checkbox area-select__item">
+                <input class="checkbox__input" type="checkbox" id="housing-class-1" name="housing-class">
+                <label class="checkbox__label" for="housing-class-1">Эконом</label>
+              </div>
+              <div class="checkbox area-select__item">
+                <input class="checkbox__input" type="checkbox" id="housing-class-2" name="housing-class">
+                <label class="checkbox__label" for="housing-class-2">Комфорт</label>
+              </div>
+              <div class="checkbox area-select__item">
+                <input class="checkbox__input" type="checkbox" id="housing-class-3" name="housing-class">
+                <label class="checkbox__label" for="housing-class-3">Люкс</label>
+              </div>
+            </div>
+
+            <button class="link area-select__link">Выбрать все</button>
+
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="ready-progress">
+      <div class="ready-progress__title">Готовность</div>
+      <div class="ready-progress__bar">
+        <input class="ready-progress__slider js-ready-progress-slider" type="text">
+      </div>
+      <div class="ready-progress__start">Любая</div>
+    </div>
+
+  </div>
+  <div class="filter__section">
+    <div class="search">
+      <input class="search__input" type="text" placeholder="Поиск по ЖК...">
+    </div>
+    <div class="date-interval js-date-interval">
+      <div class="date-interval__item">
+        <div class="date-interval__label">Старт продаж с:</div>
+        <input class="date-interval__input" type="text" name="start" value="26.10.2020">
+      </div>
+      <div class="date-interval__item">
+        <div class="date-interval__label">по:</div>
+        <input class="date-interval__input" type="text" name="end">
+      </div>
+    </div>
+    <div class="filter__controls">
+      <button class="link filter__controls-reset js-filter-reset">Очистить фильтр</button>
+      <button class="button button--primary button--large filter__controls-search js-filter-search">Найти</button>
+    </div>
+  </div>
+</div>

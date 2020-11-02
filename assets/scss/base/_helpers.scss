@@ -1,11 +1,4 @@
-// -----------------------------------------------------------------------------
 // Helpers
-// -----------------------------------------------------------------------------
-
-// example:
-// https://github.com/HugoGiraudel/sass-boilerplate/blob/master/stylesheets/base/_helpers.scss
-
-@import "assets/scss/components/variables";
 
 .container {
   margin: 0 auto;
@@ -30,12 +23,9 @@
 } */
 
 .link {
+  display: inline-block;
+  border: none;
   text-decoration: none;
-  color: $color-white;
+  color: $color-cornflower-blue;
+  background: none;
 }
-
-/* .link--underline {}
-
-.link--underline-dashed {
-
-} */

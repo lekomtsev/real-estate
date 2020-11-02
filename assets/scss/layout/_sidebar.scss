@@ -1,4 +1,4 @@
-@import "variables";
+// Sidebar
 
 .sidebar {
   position: fixed;
@@ -8,5 +8,30 @@
   padding: 120px 20px 20px 40px;
   width: 290px;
   height: 100%;
-  background: $color-outer-space;
+  background: $color-ebony-clay;
+}
+
+.navbar__item {
+  &.is-active .navbar__link {
+    opacity: 1;
+  }
+}
+
+.navbar__link {
+  height: 58px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 58px;
+  letter-spacing: 0.34px;
+  text-decoration: none;
+  color: $color-white;
+  opacity: 0.5;
+
+  .svg-inline--fa {
+    margin-right: 9px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
 }

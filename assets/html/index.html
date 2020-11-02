@@ -1,68 +1,40 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Real Estate</title>
+
+  <%= require('html-loader!./partials/head.html') %>
+
 </head>
-<body>
+<body class="wrapper">
 
-    <div class="wrapper">
-        <div class="header">
-            <a class="logo" href="/">
-                <img class="logo__image" src="../images/main-logo.png" alt="Real Estate">
-                <span>Real Estate</span>
-            </a>
-            <div class="header__inner">
+  <%= require('html-loader!./partials/header.html') %>
 
-                <div class="container header__container">
-                    <div>Переключатель темы</div>
+  <%= require('html-loader!./partials/sidebar.html') %>
 
-                    <div class="user-account">
-                        <div class="user-account__name">jsmaster</div>
-                        <a class="link link--underline-dashed user-account__logout" href="#logout">Выйти</a>
-                        <div class="user-preview">
-                            <img class="user-preview__image"
-                                 src="../images/avatar.png"
-                                 alt="avatar">
-                        </div>
-                    </div>
-                </div>
+  <div class="main">
+    <div class="container">
 
-            </div>
-        </div>
-        <div class="sidebar">
-            <ul class="navbar">
-                <li class="navbar__item">
-                    <a class="navbar__link" href="#">На сайт</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="#">Жилые комплексы</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="#">Застройщики</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="#">Аналитика продаж</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="#">Планировки</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="#">Ценообразование</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="#">Анализ локации</a>
-                </li>
-            </ul>
-        </div>
-        <div class="main">
-            main
-        </div>
+      <%= require('html-loader!./partials/filters.html') %>
+
+      <div class="main__title-wrapper">
+        <h2 class="main__title">Выберите дома для сравнения</h2>
+        <button class="button button--arrow button--rounded
+          button--primary button--small js-map-control">Скрыть карту</button>
+      </div>
+
+      <!-- Map -->
+      <%= require('html-loader!./partials/map.html') %>
+
+      <!-- Toggle View Cards -->
+      <%= require('html-loader!./partials/view-mode.html') %>
+
+      <!-- Cards -->
+      <%= require('html-loader!./partials/product.html') %>
 
     </div>
+  </div>
+
+  <!--<%= require('html-loader!./partials/footer.html') %>-->
 
 </body>
 </html>

@@ -1,5 +1,29 @@
 // User account
 
 .user-account {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   margin-left: auto;
+}
+
+.user-account__name {
+  font-size: 17px;
+}
+
+.user-account__link {
+  margin-top: 5px;
+  font-family: $FuturaPT;
+  font-weight: 500;
+}
+
+.user-preview {
+  margin-left: 8px;
+  border-radius: 50%;
+  width: 47px;
+  height: 47px;
+
+  &__image {
+    max-width: 100%;
+  }
 }

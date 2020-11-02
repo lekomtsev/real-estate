@@ -2,7 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 // Копирование изображений, шрифтов, uploads итд
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -72,15 +72,15 @@ module.exports = {
     }),
 
     // Плагин копирования/Копируем изображения
-    /*new CopyWebpackPlugin({
+    new CopyWebpackPlugin({
       patterns: [
         {
-          from: 'assets/images',
-          to: 'images'
+          from: 'assets/images/*',
+          to: 'images/*'
         },
 
       ],
-    }),*/
+    }),
 
   ],
   module: {
@@ -110,7 +110,6 @@ module.exports = {
               postcssOptions: {
                 plugins: [
                   'autoprefixer',
-                  // {} options
                 ]
               },
               sourceMap: true
@@ -183,35 +182,8 @@ module.exports = {
           name: '[name].[ext]',
         },
         exclude: /node_modules/,
-      },
+      }
     ],
-    /*rules: [
-        {
-            test: /\.s[ac]ss$/i,
-            use: [
-                {
-                    loader: MiniCssExtractPlugin.loader,
-                    options: {
-                        hmr: true,
-                        reloadAll: true,
-                        publicPath: 'dist',
-                        sourceMap: false,
-                    }
-                },
-                'css-loader',
-                'postcss-loader',
-                'sass-loader'
-            ],
-        },
-        {
-            test: /\.(woff|woff2)$/,
-            loader: 'file-loader',
-            options: {
-                publicPath: './assets/fonts',
-                // outputPath: './assets1/fonts/test',
-            }
-        },
-    ]*/
   }
 }
 

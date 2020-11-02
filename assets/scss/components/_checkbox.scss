@@ -1,0 +1,45 @@
+// Checkbox
+
+.checkbox {
+  position: relative;
+}
+
+.checkbox__input {
+  display: none;
+}
+
+.checkbox__label {
+  position: relative;
+  display: inline-block;
+  padding-left: 21px;
+  font-family: $BebasNeue;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.checkbox__label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  margin-right: 7px;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background: $color-silver;
+}
+
+.checkbox__label::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 9px;
+  height: 9px;
+  background: url("../../images/svg/check-mark.svg") no-repeat center/cover;
+}
+
+.checkbox__input:checked + .checkbox__label::before {
+  background: $color-persian-green;
+}

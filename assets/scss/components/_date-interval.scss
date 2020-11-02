@@ -1,0 +1,33 @@
+// Date interval
+
+.date-interval {
+  display: flex;
+}
+
+.date-interval__item {
+  display: flex;
+  align-items: center;
+}
+
+// .date-interval__label {}
+
+.date-interval__input {
+  margin: 0 12px;
+  border: 0;
+  border-bottom: 1px solid #d0cbd8;
+  padding: 6px 0;
+  width: 75px;
+  font-size: 15px;
+  text-align: center;
+  color: $color-ebony-clay;
+  background: transparent;
+}
+
+.datepicker-input.in-edit:focus,
+.datepicker-input.in-edit:active {
+  box-shadow: none;
+}
+
+.datepicker-input.in-edit {
+  border-color: transparent;
+}
