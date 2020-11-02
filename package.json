@@ -2,10 +2,8 @@
   "name": "real-estate",
   "version": "1.0.0",
   "description": "Тестовый проект по недвижке для прокачки js",
-  "main": "../../webpack/start-templates/template-v2/assets/index.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development && webpack --mode development",
-    "dev:watch": "cross-env NODE_ENV=development && webpack --mode development --watch",
     "build": "cross-env NODE_ENV=production && webpack -p",
     "prod": "npm run build",
     "start:open": "cross-env NODE_ENV=development && webpack-dev-server --mode development --open",
